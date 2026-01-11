@@ -8,7 +8,6 @@ import {
   Spin,
   Alert,
   Space,
-  Tag,
   ConfigProvider,
   theme,
 } from "antd";
@@ -201,14 +200,6 @@ const App: React.FC = () => {
                     <Space>
                       <StarOutlined /> Lời Giải Từ Bậc Thầy Phong Thủy
                     </Space>
-                  }
-                  extra={
-                    <Tag
-                      color="warning"
-                      style={{ color: "#fff", border: "none" }}
-                    >
-                      Model: {data.used_model}
-                    </Tag>
                   }
                 >
                   <div className="markdown-body">

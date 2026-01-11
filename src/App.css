@@ -1,0 +1,143 @@
+/* Import Font từ Google: Philosopher (Tiêu đề) & Alegreya (Nội dung) */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* --- Reset & Background --- */
+body {
+  margin: 0;
+  font-family: "Alegreya", serif; /* Font giống sách cổ cho nội dung */
+  font-size: 18px; /* Tăng size chữ để dễ đọc hơn */
+  background-color: #0f172a;
+  /* Background tối với các đốm sáng mờ ảo */
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+  background-attachment: fixed;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+.ant-typography h1,
+.ant-typography h2,
+.ant-typography h3 {
+  font-family: "Philosopher", sans-serif !important; /* Font uốn lượn cho tiêu đề */
+  color: #fbbf24 !important; /* Màu vàng kim */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.5px;
+}
+
+/* --- Components Overrides --- */
+
+/* Glassmorphism Card (Thẻ trong suốt) */
+.mystic-card {
+  background: rgba(
+    15,
+    23,
+    42,
+    0.6
+  ) !important; /* Giảm độ đục để nhìn xuyên thấu hơn */
+  backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(251, 191, 36, 0.15) !important; /* Viền vàng mờ */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.mystic-card .ant-card-head {
+  border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+  min-height: 56px;
+}
+
+.mystic-card .ant-card-head-title {
+  color: #fbbf24 !important;
+  font-size: 1.4rem;
+  font-family: "Philosopher", sans-serif;
+  font-weight: 700;
+}
+
+/* Markdown Styles Customization */
+.markdown-body {
+  font-family: "Alegreya", serif;
+  color: #e2e8f0;
+  line-height: 1.8;
+  font-size: 1.15rem; /* Chữ to rõ ràng */
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+  font-family: "Philosopher", sans-serif;
+  color: #fbbf24;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+  margin-top: 1.5em;
+  padding-bottom: 0.2em;
+}
+
+.markdown-body strong {
+  color: #fca5a5; /* Màu đỏ nhạt nhấn mạnh hung/cát */
+  font-weight: 700;
+}
+
+/* Table Styles - Huyền bí */
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #334155;
+}
+
+.markdown-body th {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fbbf24;
+  border: 1px solid #334155;
+  padding: 12px;
+  text-transform: uppercase;
+  font-family: "Philosopher", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.markdown-body td {
+  border: 1px solid #334155;
+  padding: 12px;
+  color: #cbd5e1;
+}
+
+/* Hiệu ứng lung linh cho button */
+.glow-button {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+  border: none;
+  font-family: "Philosopher", sans-serif; /* Button cũng dùng font tiêu đề */
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(217, 119, 6, 0.4);
+  transition: all 0.4s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 25px rgba(217, 119, 6, 0.7);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.glow-button:disabled {
+  background: #475569;
+  box-shadow: none;
+}
+
+.ant-picker-dropdown .ant-picker-content td {
+  padding: 2px 0 !important;
+}
+
+.ant-picker-now-btn {
+  color: #fbbf24 !important;
+}
